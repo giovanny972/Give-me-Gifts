@@ -1,0 +1,71 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/list_share.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+{% endblock %}
+
+{% block navbar %}
+
+    {% include "Components/_navbar.html.twig" %}
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="main-background"></div>
+    <div class="list-share-container">
+        <div class="list-data-container">
+            <div class="share-link" style="display: none;">{{ list[0]['share_link'] }}</div>
+            <h3 class="list-title">{{ list[0]['lname'] }}</h3>
+            <div class="list-event-container">
+                <h4 class="list-event">{{ list[0]['ename'] }}</h4>
+                <h4 class="list-date">{{ list[0]['limit_date']|date('d-m-Y') }}</h4>
+            </div>
+            <p class="list-description">
+                <strong>{{ list[0]['ldescription'] }}</strong>
+            </p>
+        </div>
+        <div class="article-container">
+            {% for article in list %}
+                {% if article.is_gifted is same as "0" %}
+                    <div class="article">
+                        <div style="display: none;">{{ article.artid }}</div>
+                        <img class="article-img" alt="{{ article.aname }}"
+                             src="{{ article.picture }}"/>
+                        <h4 class="article-title">{{ article.aname }}</h4>
+                        <h4 class="article-price">{{ article.price }}€</h4>
+                        <p class="article-description">{{ article.adescription }}</p>
+                        <a class="seeMore-button" href="{{ article.market_link }}" target="_blank">
+                            <p>En savoir plus</p>
+                        </a>
+
+                        <div class="gift-button-reserved">
+                            <p>Réservez !</p>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="article article-reserved">
+                        <div style="display: none;">{{ article.artid }}</div>
+                        <img class="article-img" alt="{{ article.aname }}"
+                             src="{{ article.picture }}"/>
+                        <h4 class="article-title">{{ article.aname }}</h4>
+                        <h4 class="article-price">{{ article.price }}€</h4>
+                        <p class="article-description">{{ article.adescription }}</p>
+                        <a class="seeMore-button" href="{{ article.market_link }}" target="_blank">
+                            <p>En savoir plus</p>
+                        </a>
+                        <div class="gift-button-already-reserved">
+                            <p>Déjà réservé !</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+<script src="/assets/javascript/share_link.js"></script>
+{% endblock %}

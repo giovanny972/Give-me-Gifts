@@ -1,0 +1,221 @@
+.main-background {
+    background-image: url("/assets/images/add_list.jpg");
+    background-size: cover;
+    position: fixed;
+}
+
+p,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    background-color: transparent;
+    color: var(--primary-color);
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 2rem;
+}
+
+.wedding {
+    background-color: var(--event-color-8);
+}
+
+.birthday {
+    background-color: var(--event-color-1);
+}
+
+.rack {
+    background-color: var(--event-color-4);
+}
+
+.christmas {
+    background-color: var(--event-color-7);
+}
+
+.baby_shower {
+    background-color: var(--event-color-2);
+}
+
+.other {
+    background-color: var(--event-color-6);
+}
+
+/*list container*/
+.cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    height: auto;
+    padding-bottom: 3rem;
+}
+
+/* add new list */
+.in-card-add {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--background-color);
+    opacity: 0.9;
+    padding: 0.5rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-add {
+    border-radius: 10px;
+    width: calc(100% - 2rem);
+    margin: 0 1rem 2rem 1rem;
+}
+
+.card-add:hover {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.in-card-add a img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.card {
+    border-radius: 10px;
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.card:hover {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.card-header-add {
+    height: fit-content;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--card-color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: var(--primary-color);
+}
+
+.card-header {
+    height: fit-content;
+    padding: 0.5rem;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: var(--font-color);
+}
+
+.in-card {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background-color);
+    opacity: 0.9;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.in-card .card-body {
+    width: 60%;
+    padding: 0.5rem;
+}
+
+.card-title {
+    font-weight: bold;
+    text-align: center;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    font-size: 1.2rem;
+}
+
+.card-date {
+    font-style: italic;
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 0.3rem;
+}
+
+.card-description {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.in-card .gift-list {
+    width: calc(100% - 60%);
+    min-height: 12rem;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.in-card .gift-list p {
+    margin: 0.3rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: var(--font-color);
+    text-align: center;
+}
+
+.add-img {
+    padding: 0 15rem 0 15rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .main-background {
+        background-image: url("/assets/images/add_list.jpg");
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-add {
+        border-radius: 10px;
+        width: calc(100% / 3 - 5rem);
+        margin: 0 auto 2rem auto;
+    }
+
+    .card {
+        box-shadow: 5px 5px 8px rgb(0, 0, 0);
+        background: var(--background-color);
+        width: calc((100% / 3) - 5rem);
+    }
+
+    h1 {
+        text-align: center;
+        background-color: transparent;
+        color: var(--primary-color);
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 4rem;
+    }
+
+    @-webkit-keyframes scale-up-center {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        100% {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    }
+    @keyframes scale-up-center {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        100% {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    }
+}

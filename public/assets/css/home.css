@@ -1,0 +1,136 @@
+.main-background {
+    background-image: url("/assets/images/pexels-lucie2.jpg");
+    position: fixed;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+.container-card {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 2rem;
+}
+
+.card {
+    margin: 0 auto 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--background-color);
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    height: max-content;
+}
+
+.image-card {
+    height: calc(100% / 2);
+    width: 100%;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+a {
+    margin-bottom: inherit;
+    text-decoration: none;
+}
+
+.card > h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.titre {
+    text-align: center;
+    background-color: transparent;
+    color: var(--primary-color);
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 2rem;
+}
+
+.paragraph {
+    margin: 0;
+    font-size: 1.2rem;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.button {
+    width: 10rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--btn-color);
+    border-radius: 11px;
+    color: var(--primary-color);
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px black;
+}
+
+.welcome-user {
+    font-size: 1.7rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .main-background {
+        background-image: url("/assets/images/pexels-lucie.jpg");
+    }
+
+    .container-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: calc(100% - 30%);
+    }
+
+    .titre {
+        text-align: center;
+        background-color: transparent;
+        color: var(--primary-color);
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 4rem;
+    }
+
+    .card {
+        width: calc(100% / 3 - 3rem);
+        height: 100%;
+    }
+
+    .card > h3 {
+        font-size: 2.3rem;
+    }
+
+    .card > .paragraph {
+        font-size: 1.5rem;
+    }
+
+    .button {
+        width: 10rem;
+        margin-bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: var(--btn-color);
+        border-radius: 11px;
+        color: var(--primary-color);
+        font-size: 20px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        font-weight: bold;
+        box-shadow: 2px 2px 4px black;
+    }
+
+    .button:hover {
+        background-color: var(--background-color);
+        color: var(--font-color);
+    }
+}

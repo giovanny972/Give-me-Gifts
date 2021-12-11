@@ -1,0 +1,173 @@
+.main-background {
+    background-image: url("/assets/images/background_list_mobile.jpg");
+    background-size: cover;
+    position: fixed;
+}
+
+.wedding {
+    background-color: var(--event-color-8);
+}
+
+.birthday {
+    background-color: var(--event-color-1);
+}
+
+.baby_shower {
+    background-color: var(--event-color-2);
+}
+
+h1 {
+    text-align: center;
+    background-color: transparent;
+    color: var(--primary-color);
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 2rem;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 4px rgb(0, 0, 0);
+}
+
+h3 {
+    text-align: center;
+    color: var(--primary-color);
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    margin-top: 4rem;
+}
+
+.no-account {
+    text-align: center;
+    background-color: var(--btn-color);
+    width: 13rem;
+    margin: auto;
+    border-radius: 11px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
+    padding: 1rem;
+}
+
+.no-account:hover {
+    background-color: var(--background-color);
+}
+
+.no-account a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.no-account-href:hover {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+/*list container*/
+.cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    height: auto;
+    padding-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.card {
+    border-radius: 10px;
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.card-header {
+    height: fit-content;
+    padding: 0.5rem;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: var(--font-color);
+}
+
+.in-card {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background-color);
+    opacity: 0.9;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.in-card .card-body {
+    width: 60%;
+    padding: 0.5rem;
+}
+
+.in-card .card-body p {
+    font-size: 1rem;
+}
+
+.card-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-date {
+    font-style: italic;
+    text-align: center;
+}
+
+.card-description {
+    text-align: center;
+}
+
+.in-card .gift-list {
+    width: calc(100% - 60%);
+    min-height: 12rem;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.in-card .gift-list p {
+    margin: 0.3rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: var(--font-color);
+    text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+    .main-background {
+        background-image: url("/assets/images/background_list.jpg");
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-add {
+        border-radius: 10px;
+        width: calc(100% - 7rem);
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .card {
+        box-shadow: 5px 5px 8px rgb(0, 0, 0);
+        background: var(--background-color);
+        width: calc((100% / 3) - 5rem);
+    }
+
+    h1 {
+        text-align: center;
+        background-color: transparent;
+        color: var(--primary-color);
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 4rem;
+    }
+}
